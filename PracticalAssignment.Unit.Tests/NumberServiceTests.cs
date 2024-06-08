@@ -25,7 +25,7 @@ namespace PracticalAssignment.Unit.Tests
         public void Parse_ValidNumbers_ReturnsCorrectNumbers()
         {
             // Arrange
-            string input = "1 2 3 4 5";
+            var input = "1 2 3 4 5";
 
             // Act
             var results = _service.Parse(input);
@@ -38,7 +38,7 @@ namespace PracticalAssignment.Unit.Tests
         public void Parse_InvalidNumber_ThrowsDomainServiceException()
         {
             // Arrange
-            string input = "1 2 three 4 5";
+            var input = "1 2 three 4 5";
 
             // Act & Assert
             var ex = Assert.Throws<DomainServiceException>(() => _service.Parse(input).ToList());
